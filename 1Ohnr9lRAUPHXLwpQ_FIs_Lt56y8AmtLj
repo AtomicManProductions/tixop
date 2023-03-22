@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket Template Generator</title>
+	<style>
+		.ticket {
+			border: 1px solid black;
+			margin: 10px;
+			padding: 10px;
+		}
+        @media print {
+            header, footer {
+                display: none;
+            }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Ticket Template Generator</h1>
+		<form id="ticket-form">
+			<label for="event-name">Event Name:</label>
+			<input type="text" id="event-name" name="event-name"><br>
+
+			<label for="date">Date:</label>
+			<input type="date" id="date" name="date"><br>
+
+			<label for="time">Time:</label>
+			<input type="time" id="time" name="time"><br>
+
+			<label for="venue">Venue:</label>
+			<input type="text" id="venue" name="venue"><br>
+
+			<label for="ticket-price">Ticket Price:</label>
+			<input type="number" id="ticket-price" name="ticket-price"><br>
+
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" name="quantity"><br>
+
+			<label for="serialize">Serialize Tickets:</label>
+			<input type="checkbox" id="serialize" name="serialize"><br>
+
+			<input type="submit" value="Generate Ticket Template">
+		</form>
+	</header>
+
+	<script>
+		var form = document.getElementById("ticket-form");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+
+			var eventName = document.getElementById("event-name").value;
+			var date = document.getElementById("date").value;
+			var time = document.getElementById("time").value;
+			var venue = document.getElementById("venue").value;
+			var ticketPrice = document.getElementById("ticket-price").value;
+			var quantity = document.getElementById("quantity").value;
+			var serialize = document.getElementById("serialize").checked;
+
+			var ticketsContainer = document.createElement("div");
+			ticketsContainer.setAttribute("id", "tickets-container");
+			document.body.appendChild(ticketsContainer);
+
+			for (var i = 1; i <= quantity; i++) {
+				var ticketTemplate = "<div class='ticket'>" +
+					"<h2>" + eventName + "</h2>" +
+					"<p>Date: " + date + "</p>" +
+					"<p>Time: " + time + "</p>" +
+					"<p>Venue: " + venue + "</p>" +
+					"<p>Ticket Price: $" + ticketPrice + "</p>";
+
+				if (serialize) {
+					ticketTemplate += "<p>Ticket Number: " + i + "</p>";
+				}
+
+				ticketTemplate += "</div>";
+
+				ticketsContainer.innerHTML += ticketTemplate;
+			}
+
+			window.print();
+			document.body.removeChild(ticketsContainer);
+		});
+	</script>
+</body>
+</html>
