@@ -1,37 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest" />
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <title>Ticket Template Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Ticket Template Generator</h1>
-    </header>
-    <form id="ticket-form">
-      <label for="event-name">Event Name:</label>
-      <input type="text" id="event-name" name="event-name" /><br />
+    <nav class="nav">
+      <div class="nav-left"></div>
+      <div class="nav-center">
+        <a class="brand">
+          <img src="logo.png" alt="Ticket Template Generator" />
+        </a>
+      </div>
+      <div class="nav-right">
+        <a
+          target="_blank"
+          class="icon"
+          href="https://github.com/AtomicManProductions/tixop"
+        >
+          <img
+            src="https://icongr.am/devicon/github-original.svg?size=15&color=currentColor"
+          />
+          &nbsp; GitHub
+        </a>
+      </div>
+    </nav>
 
-      <label for="date">Date:</label>
-      <input type="date" id="date" name="date" /><br />
+    <section class="form-wrapper">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+          <div class="card">
+            <form id="ticket-form">
+              <label for="event-name">Event Name:</label>
+              <input type="text" id="event-name" name="event-name" /><br />
 
-      <label for="time">Time:</label>
-      <input type="time" id="time" name="time" /><br />
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" /><br />
 
-      <label for="venue">Venue:</label>
-      <input type="text" id="venue" name="venue" /><br />
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" /><br />
 
-      <label for="ticket-price">Ticket Price:</label>
-      <input type="number" id="ticket-price" name="ticket-price" /><br />
+              <label for="venue">Venue</label>
+              <input type="text" id="venue" name="venue" /><br />
 
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" /><br />
+              <label for="ticket-price">Ticket Price</label>
+              <input
+                type="number"
+                id="ticket-price"
+                name="ticket-price"
+              /><br />
 
-      <label for="serialize">Serialize Tickets:</label>
-      <input type="checkbox" id="serialize" name="serialize" /><br />
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" /><br />
 
-      <input type="submit" value="Generate Ticket Template" />
-    </form>
+              <label for="serialize">Serialize Tickets</label>
+              <input type="checkbox" id="serialize" name="serialize" /><br />
+
+              <button type="submit">Generate Ticket Template</button>
+            </form>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </section>
   </body>
   <script type="text/javascript" src="./main.js"></script>
 </html>
