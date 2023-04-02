@@ -1,0 +1,12 @@
+.ticket {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media print {
+  header,
+  form {
+    display: none;
+  }
+}
