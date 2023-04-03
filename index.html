@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Ticket Template Generator</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-left"></div>
+      <div class="nav-center">
+        <a class="brand">
+          <img src="logo.png" alt="Ticket Template Generator" />
+        </a>
+      </div>
+      <div class="nav-right">
+        <a
+          target="_blank"
+          class="icon"
+          href="https://github.com/AtomicManProductions/tixop"
+        >
+          <img
+            src="https://icongr.am/devicon/github-original.svg?size=15&color=currentColor"
+          />
+          &nbsp; GitHub
+        </a>
+      </div>
+    </nav>
+
+    <section class="form-wrapper">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-7">
+          <div class="card">
+            <form id="ticket-form">
+              <div class="row">
+                <div class="col-12">
+                  <label for="event-name">Event Name:</label>
+                  <input type="text" id="event-name" name="event-name" />
+                </div>
+
+                <div class="col-6">
+                  <label for="date">Date</label>
+                  <input type="date" id="date" name="date" />
+                </div>
+
+                <div class="col-6">
+                  <label for="time">Time</label>
+                  <input type="time" id="time" name="time" />
+                </div>
+
+                <div class="col-6">
+                  <label for="venue">Venue</label>
+                  <input type="text" id="venue" name="venue" />
+                </div>
+
+                <div class="col-3">
+                  <label for="ticket-price">Ticket Price</label>
+                  <input type="number" id="ticket-price" name="ticket-price" />
+                </div>
+
+                <div class="col-3">
+                  <label for="quantity">Quantity</label>
+                  <input type="number" id="quantity" name="quantity" />
+                </div>
+
+                <div class="col-12">
+                  <input type="checkbox" id="serialize" name="serialize" />
+                  <label for="serialize">Serialize Tickets</label>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit">Generate Ticket Template</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript" src="./main.js"></script>
+</html>

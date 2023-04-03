@@ -1,0 +1,20 @@
+nav {
+  margin-bottom: 50px;
+}
+
+.ticket {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 25px;
+}
+
+@media print {
+  .nav,
+  .form-wrapper {
+    display: none;
+  }
+}
