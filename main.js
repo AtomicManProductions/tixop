@@ -15,29 +15,16 @@ form.addEventListener("submit", function (event) {
   document.body.appendChild(ticketsContainer);
 
   for (let i = 1; i <= quantity; i++) {
-    let ticketTemplate =
-      "<div class='ticket'>" +
-      "<h2>" +
-      eventName +
-      "</h2>" +
-      "<p>Date: " +
-      date +
-      "</p>" +
-      "<p>Time: " +
-      time +
-      "</p>" +
-      "<p>Venue: " +
-      venue +
-      "</p>" +
-      "<p>Ticket Price: $" +
-      ticketPrice +
-      "</p>";
-
-    if (serialize) {
-      ticketTemplate += "<p>Ticket Number: " + i + "</p>";
-    }
-
-    ticketTemplate += "</div>";
+    let ticketTemplate = `
+      <div class="ticket">
+        <h2>${eventName}</h2>
+        <p>Date: ${date}</p>
+        <p>Time: ${time}</p>
+        <p>Venue: ${venue}</p>
+        <p>Ticket Price: $${ticketPrice}</p>
+        ${serialize ? "<p>Ticket Number: " + i + "</p>" : ""}
+      </div>
+    `;
 
     ticketsContainer.innerHTML += ticketTemplate;
   }
