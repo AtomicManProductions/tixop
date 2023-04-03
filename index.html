@@ -30,35 +30,49 @@
     <section class="form-wrapper">
       <div class="row">
         <div class="col"></div>
-        <div class="col-6">
+        <div class="col-7">
           <div class="card">
             <form id="ticket-form">
-              <label for="event-name">Event Name:</label>
-              <input type="text" id="event-name" name="event-name" /><br />
+              <div class="row">
+                <div class="col-12">
+                  <label for="event-name">Event Name:</label>
+                  <input type="text" id="event-name" name="event-name" />
+                </div>
 
-              <label for="date">Date</label>
-              <input type="date" id="date" name="date" /><br />
+                <div class="col-6">
+                  <label for="date">Date</label>
+                  <input type="date" id="date" name="date" />
+                </div>
 
-              <label for="time">Time</label>
-              <input type="time" id="time" name="time" /><br />
+                <div class="col-6">
+                  <label for="time">Time</label>
+                  <input type="time" id="time" name="time" />
+                </div>
 
-              <label for="venue">Venue</label>
-              <input type="text" id="venue" name="venue" /><br />
+                <div class="col-6">
+                  <label for="venue">Venue</label>
+                  <input type="text" id="venue" name="venue" />
+                </div>
 
-              <label for="ticket-price">Ticket Price</label>
-              <input
-                type="number"
-                id="ticket-price"
-                name="ticket-price"
-              /><br />
+                <div class="col-3">
+                  <label for="ticket-price">Ticket Price</label>
+                  <input type="number" id="ticket-price" name="ticket-price" />
+                </div>
 
-              <label for="quantity">Quantity</label>
-              <input type="number" id="quantity" name="quantity" /><br />
+                <div class="col-3">
+                  <label for="quantity">Quantity</label>
+                  <input type="number" id="quantity" name="quantity" />
+                </div>
 
-              <label for="serialize">Serialize Tickets</label>
-              <input type="checkbox" id="serialize" name="serialize" /><br />
+                <div class="col-12">
+                  <input type="checkbox" id="serialize" name="serialize" />
+                  <label for="serialize">Serialize Tickets</label>
+                </div>
 
-              <button type="submit">Generate Ticket Template</button>
+                <div class="col-12">
+                  <button type="submit">Generate Ticket Template</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
